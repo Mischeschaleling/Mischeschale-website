@@ -66,49 +66,55 @@
 
     header.hero {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       min-height: 90vh;
       background-color: #0e1b07;
       color: #f7e8e1;
       padding: 2rem;
-      background-size: cover;
-      background-position: center;
-      position: relative;
     }
 
-    .hero-left {
+    .hero-inner {
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    .hero-text {
       flex: 1;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       justify-content: center;
-      gap: 1rem;
+      text-align: left;
     }
 
-    .hero-left img {
-      width: 150px;
-      height: auto;
+    .hero-text img {
+      width: 120px;
+      margin-bottom: 1rem;
     }
 
-    .hero-left h1 {
-      font-size: 3rem;
+    .hero-text h1 {
+      font-size: 4rem;
+      margin-bottom: 1rem;
     }
 
-    .hero-left p {
+    .hero-text p {
       font-size: 1.5rem;
-      margin-top: 1rem;
+      max-width: 500px;
     }
 
-    .hero-right {
+    .hero-image {
       flex: 1;
       display: flex;
       justify-content: center;
-      align-items: center;
     }
 
-    .hero-right img {
-      max-width: 100%;
+    .hero-image img {
+      width: 100%;
+      max-width: 500px;
       height: auto;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -172,15 +178,15 @@
     @media (max-width: 768px) {
       header.hero {
         flex-direction: column;
+      }
+      .hero-inner {
+        flex-direction: column;
         text-align: center;
       }
-      .hero-left, .hero-right {
-        width: 100%;
-      }
-      .hero-left {
+      .hero-text {
         align-items: center;
       }
-      .hero-left img {
+      .hero-text img {
         margin-bottom: 1rem;
       }
     }
@@ -199,13 +205,15 @@
   </nav>
 
   <header class="hero">
-    <div class="hero-left">
-      <img src="dein-logo.png" alt="Logo Mischeschale">
-      <h1>Mischeschale</h1>
-      <p>Kiffen ist Kultur. Mischeschale das Werkzeug.</p>
-    </div>
-    <div class="hero-right">
-      <img src="smoke.jfif" alt="Produktbild Header">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <img src="dein-logo.png" alt="Logo Mischeschale">
+        <h1>Mischeschale</h1>
+        <p>Kiffen ist Kultur. Mischeschale das Werkzeug.</p>
+      </div>
+      <div class="hero-image">
+        <img src="smoke.jfif" alt="Produktbild Header">
+      </div>
     </div>
   </header>
 
