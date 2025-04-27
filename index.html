@@ -1,207 +1,163 @@
-<!DOCTYPE html> <!-- Dokumenttyp: HTML5 -->
-<html lang="de"> <!-- Spracheinstellung: Deutsch -->
-<head> 
-  <meta charset="UTF-8"> <!-- Zeichensatz UTF-8: Unterstützt Umlaute usw. -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Mobile Responsive Design -->
-  <title>Mischeschale® - Kiffen ist Kultur </title> <!-- Titel der Seite im Browser-Tab -->
-  
-  <!-- Einbinden von Google Fonts: Poppins Schriftart -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mischeschale® - Kiffen ist Kultur</title>
 
-  <style> <!-- Start des internen CSS-Styles -->
-    html {
-      scroll-behavior: smooth; /* Weiches Scrollen beim Klick auf Links */
-    }
+  <!-- Fonts Laden -->
+  <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@700&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Body Basis Styling */
     body {
-      margin: 0; /* Keine Standard-Ränder um die Seite */
-      font-family: 'Poppins', sans-serif; /* Schriftart der gesamten Seite */
-      background: url('images/Download (2).jfif') center/cover no-repeat; /* Hintergrundfarbe + Bild */
-      background-attachment: fixed; /* Hintergrund bleibt fixiert beim Scrollen */
-      background-size: cover; /* Hintergrundbild füllt Bildschirm */
-      background-position: center; /* Hintergrundbild zentrieren */
+      margin: 0;
+      font-family: 'DM Sans', sans-serif;
+      background: #F9F6EE url('images/P1130277.JPG') center/cover no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      color: #12343b; /* Akzentfarbe für Text */
+      overflow-x: hidden;
     }
+
+    /* Leichter Blur für Hintergrund */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      backdrop-filter: blur(2px);
+      z-index: -1;
+    }
+
+    /* Navigation */
     nav {
-      position: sticky; /* Menüzeile bleibt beim Scrollen oben kleben */
-      top: 0; /* Klebt oben am Fenster */
-      background: rgba(255,255,255,0.9); /* Leicht transparenter Hintergrund */
-      z-index: 1000; /* Menü über anderen Elementen */
-      padding: 1rem 0; /* Abstand oben/unten */
+      display: flex;
+      justify-content: center;
+      padding: 1.5rem;
+      background: rgba(255,255,255,0.8);
     }
     nav ul {
-      list-style: none; /* Keine Aufzählungspunkte */
-      display: flex; /* Horizontale Ausrichtung */
-      justify-content: center; /* Zentrieren der Links */
-      gap: 2rem; /* Abstand zwischen Links */
-      margin: 0;
+      list-style: none;
+      display: flex;
+      gap: 2rem;
       padding: 0;
+      margin: 0;
     }
     nav a {
-      font-family: 'Poppins', sans-serif; /* Schrift im Menü */
-      text-decoration: none; /* Keine Unterstreichung */
-      color: #3B2F2F; /* Dunkelbraune Schriftfarbe */
-      font-weight: 600; /* Etwas fetter */
-      transition: color 0.3s, transform 0.3s; /* Sanfte Animation beim Hover */
+      text-decoration: none;
+      color: #924622; /* Hauptfarbe */
+      font-weight: 700;
+      font-size: 1rem;
+      transition: color 0.3s;
     }
     nav a:hover {
-      color: #4CAF50; /* Farbe wechselt zu grün beim Hover */
-      transform: scale(1.05); /* Link wird minimal größer beim Hover */
+      color: #12343b;
     }
+
+    /* Header */
     header {
-      display: flex; /* Flexbox für Zentrierung */
-      flex-direction: column; /* Elemente untereinander */
-      align-items: center; /* Zentriert horizontal */
-      justify-content: center; /* Zentriert vertikal */
-      min-height: 100vh; /* Nimmt volle Bildschirmhöhe ein */
-      padding: 2rem; /* Innenabstand */
-      text-align: center; /* Text zentriert */
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: rgba(255,255,255,0.6);
+      padding: 3rem 1rem;
     }
     header h1 {
-      font-size: 3rem; /* Größe der Überschrift */
-      margin: 0 0 1rem 0; /* Abstand unten */
+      font-family: 'Phudu', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #924622;
     }
     .logo {
-      margin-top: 1rem; /* Abstand zum Claim */
-      width: 200px; /* Breite des Logos */
+      width: 150px;
+      margin: 1rem 0;
     }
     .button {
-      margin-top: 2rem; /* Abstand nach oben */
-      background-color: #8ebf63; /* Grüne Hintergrundfarbe */
-      color: white; /* Weiße Schriftfarbe */
-      padding: 1rem 2rem; /* Innenabstand Button */
-      border: none; /* Keine Umrandung */
-      border-radius: 50px; /* Runde Ecken */
-      font-size: 1.2rem; /* Schriftgröße im Button */
-      cursor: pointer; /* Mauszeiger wird zur Hand */
-      text-decoration: none; /* Kein Unterstrich */
-      transition: all 0.3s ease; /* Weiche Animation */
-    }
-    .button:hover {
-      background-color: #66FF66; /* Helleres Grün beim Hover */
-      transform: scale(1.05); /* Button wächst leicht beim Hover */
-    }
-    section {
-      padding: 6rem 2rem; /* Innenabstand in Sections */
-      max-width: 1000px; /* Maximalbreite */
-      margin: 0 auto; /* Zentrierung */
-      text-align: center; /* Text zentrieren */
-      opacity: 0; /* Unsichtbar vor Scroll */
-      transform: translateY(50px); /* Start leicht verschoben */
-      transition: all 0.8s ease-out; /* Weiche Animation sichtbar werden */
-    }
-    section.visible {
-      opacity: 1; /* Sichtbar wenn im Viewport */
-      transform: translateY(0px); /* Normale Position */
-    }
-    section h2 {
-      font-size: 2rem; /* Schriftgröße H2-Überschriften */
-      margin-bottom: 1rem; /* Abstand nach unten */
-    }
-    .products {
-      display: flex; /* Flexbox Anordnung der Produkte */
-      flex-wrap: wrap; /* Zeilenumbruch bei kleinen Displays */
-      justify-content: center; /* Zentriert die Produktbilder */
-      gap: 2rem; /* Abstand zwischen Bildern */
-      margin-top: 2rem;
-    }
-    .products img {
-      max-width: 300px; /* Maximale Breite der Produktbilder */
-      border-radius: 10px; /* Runde Ecken */
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Schattenwurf */
-    }
-    form {
-      margin-top: 3rem; /* Abstand oben */
-      display: flex;
-      flex-direction: column; /* Felder untereinander */
-      align-items: center; /* Zentrierung */
-      gap: 1rem; /* Abstand zwischen Feldern */
-    }
-    input[type="email"] {
-      padding: 1rem;
-      width: 300px; /* Breite E-Mail Eingabefeld */
-      border: none;
-      border-radius: 30px;
-      font-size: 1rem;
-    }
-    input[type="submit"] {
-      background-color: #4CAF50; /* Grüner Button */
-      color: white;
+      background-color: #12343b;
+      color: #fff;
       padding: 1rem 2rem;
       border: none;
       border-radius: 50px;
       font-size: 1.2rem;
+      text-decoration: none;
       cursor: pointer;
       transition: all 0.3s ease;
     }
-    input[type="submit"]:hover {
-      background-color: #66FF66;
+    .button:hover {
+      background-color: #924622;
       transform: scale(1.05);
     }
+
+    /* Scroll Down Pfeil */
+    .scroll-down {
+      margin-top: 2rem;
+      font-size: 2rem;
+      color: #924622;
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
+    }
+
+    /* Basic Section Styling */
+    section {
+      padding: 6rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    /* Footer */
     footer {
       text-align: center;
       padding: 2rem;
-      background-color: #2C2424; /* Dunkler Hintergrund im Footer */
-      color: #777; /* Graue Schrift */
-      font-size: 0.9rem; /* Etwas kleinere Schrift */
+      background-color: #2C2424;
+      color: #f7e8e1;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 
 <body>
 
-<!-- Navigation Menü -->
+<!-- Navigation -->
 <nav>
   <ul>
-    <li><a href="#home">Home</a></li> <!-- Link zu Header -->
-    <li><a href="#produkte">Produkte</a></li> <!-- Link zu Produktbereich -->
-    <li><a href="#newsletter">Newsletter</a></li> <!-- Link zu Newsletterbereich -->
+    <li><a href="#home">Home</a></li>
+    <li><a href="#produkte">Produkte</a></li>
+    <li><a href="#newsletter">Newsletter</a></li>
   </ul>
 </nav>
 
 <!-- Header Bereich -->
 <header id="home">
-  <h1>MISCHESCHALE® <br><br>Kiffen ist Kultur - <br>Mischeschale das Werkzeug.</h1> <!-- Hauptclaim -->
-  <img src="images/transpa.png" alt="Mischeschaale Logo" class="logo"> <!-- Logo -->
-  <a href="#produkte" class="button">Jetzt entdecken</a> <!-- Button zu Produkte -->
+  <h1>Kiffen ist Kultur.<br>Mischeschale das Werkzeug.</h1>
+  <img src="images/transpa.png" alt="Mischeschale Logo" class="logo">
+  <a href="#produkte" class="button">Jetzt entdecken</a>
+  <div class="scroll-down">
+    &#8595;
+  </div>
 </header>
 
-<!-- Produkt Bereich -->
+<!-- Platzhalter für weitere Bereiche -->
 <section id="produkte">
-  <h2>Du und Deine Mischeschale – built different.</h2>
-  <div class="products">
-    <img src="images/P1130273.JPG" alt="Mischeschale  1"> <!-- Produktfoto 1 -->
-    <img src="images/P1130277.JPG" alt="Mischeschale  2"> <!-- Produktfoto 2 -->
-    <img src="images/P1130277.JPG" alt="Mischeschale  3"> <!-- Produktfoto 3 -->
-  </div>
+  <h2>Deine Produkte kommen hier...</h2>
 </section>
 
-<!-- Newsletter Bereich -->
 <section id="newsletter">
   <h2>Stay tuned and be a part of us...</h2>
-  <p>Trag dich ein und erfahre als Erster von unserem Launch!</p>
-  <form action="#" method="post">
-    <input type="email" name="email" placeholder="Deine E-Mail Adresse" required> <!-- Eingabefeld Email -->
-    <input type="submit" value="Be a part"> <!-- Abschicken-Button -->
-  </form>
 </section>
 
-<!-- Footer Bereich -->
+<!-- Footer -->
 <footer>
   &copy; 2025 Mischeschale® | Stay Clean. Stay Elevated.
 </footer>
-
-<!-- JavaScript Scroll Animation -->
-<script>
-  const observer = new IntersectionObserver(entries => { // Beobachtet, ob Sections im Viewport sind
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible'); // Wenn sichtbar → Fade-In Animation
-      }
-    });
-  });
-  document.querySelectorAll('section').forEach(section => {
-    observer.observe(section); // Wendet den Observer auf jede Section an
-  });
-</script>
 
 </body>
 </html>
