@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mischeschale® - Misch dein Leben</title>
+  <title>Mischeschale® - Kiffen ist Kultur</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
     body {
@@ -18,12 +18,13 @@
       align-items: center;
       justify-content: center;
       height: 100vh;
-      background: url('https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
+      background: url('images/RQTE4190.JPG') center/cover no-repeat;
       text-align: center;
+      padding: 2rem;
     }
     header h1 {
       font-family: 'Montserrat', sans-serif;
-      font-size: 4rem;
+      font-size: 3rem;
       margin: 0;
     }
     header p {
@@ -39,6 +40,7 @@
       border-radius: 50px;
       font-size: 1.2rem;
       cursor: pointer;
+      text-decoration: none;
       transition: background-color 0.3s, transform 0.3s;
     }
     .button:hover {
@@ -46,20 +48,59 @@
       transform: scale(1.05);
     }
     section {
-      padding: 6rem 2rem;
+      padding: 4rem 2rem;
       max-width: 1000px;
       margin: 0 auto;
       text-align: center;
     }
     section h2 {
       font-family: 'Montserrat', sans-serif;
-      font-size: 2.5rem;
+      font-size: 2rem;
       margin-bottom: 1rem;
     }
-    section p {
-      font-size: 1.2rem;
-      line-height: 1.6;
+    section p, label {
+      font-size: 1.1rem;
       color: #ccc;
+    }
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .products img {
+      max-width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+    form {
+      margin-top: 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    input[type="email"] {
+      padding: 1rem;
+      width: 300px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+    }
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+    input[type="submit"]:hover {
+      background-color: #66FF66;
+      transform: scale(1.05);
     }
     footer {
       text-align: center;
@@ -68,38 +109,35 @@
       font-size: 0.9rem;
       color: #777;
     }
-    a {
-      color: #4CAF50;
-      text-decoration: none;
-    }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Mischeschale®</h1>
-  <p>Kiffen ist Kultur, Mischeschale dein Werkzeug.</p>
-  <a href="#about" class="button">Jetzt entdecken</a>
+  <h1>Kiffen ist Kultur,<br> Mischeschale dein Werkzeug.</h1>
+  <a href="#produkte" class="button">Jetzt entdecken</a>
 </header>
 
-<section id="about">
-  <h2>Unsere Vision</h2>
-  <p>
-    Mischeschaale® ist mehr als ein Produkt. Es ist eine Bewegung. 
-    Wir bringen Ordnung und Ästhetik in deine Rituale. Klare Designs, nachhaltige Materialien und ein Statement für bewussten Genuss.
-  </p>
+<section id="produkte">
+  <h2>Unsere Produkte</h2>
+  <div class="products">
+    <img src="images/P1130273.JPG" alt="Mischeschaale Produkt 1">
+    <img src="images/P1130275.RW2" alt="Mischeschaale Produkt 2">
+    <img src="images/P1130277.JPG" alt="Mischeschaale Produkt 3">
+  </div>
 </section>
 
-<section id="product">
-  <h2>Das Original</h2>
-  <p>
-    Unsere handgefertigte Holzschale, perfekt abgestimmt auf deine Papes. 
-    Praktisch. Stilvoll. Ein Must-Have für echte Genießer. Bald im Shop verfügbar.
-  </p>
+<section id="newsletter">
+  <h2>Bleib auf dem Laufenden</h2>
+  <p>Trag dich ein und erfahre als Erster von unserem Launch!</p>
+  <form action="#" method="post">
+    <input type="email" name="email" placeholder="Deine E-Mail Adresse" required>
+    <input type="submit" value="Jetzt eintragen">
+  </form>
 </section>
 
 <footer>
-  &copy; 2025 Mischeschale® | <a href="#">Instagram</a> | <a href="#">Kontakt</a>
+  &copy; 2025 Mischeschale® | Stay Clean. Stay Elevated.
 </footer>
 
 </body>
