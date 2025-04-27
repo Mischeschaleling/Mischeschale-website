@@ -3,33 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mischeschale® - Kiffen ist Kultur</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  <title>Mischeschaale® - Kiffen ist Kultur</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Open Sans', sans-serif;
-      background-color: #3B2F2F;
-      color: #EEE8D5;
+      font-family: 'Poppins', sans-serif;
+      background: #F9F6EE url('images/RQTE4190.JPG') center/cover no-repeat;
+      background-attachment: fixed;
+      color: #3B2F2F;
     }
     header {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-      background: url('images/RQTE4190.JPG') center/cover no-repeat;
-      text-align: center;
+      min-height: 100vh;
       padding: 2rem;
+      text-align: center;
+      background: rgba(255,255,255,0.8);
+      backdrop-filter: blur(4px);
     }
     header h1 {
-      font-family: 'Montserrat', sans-serif;
       font-size: 3rem;
-      margin: 0;
+      margin: 0 0 1rem 0;
     }
-    header p {
-      font-size: 1.5rem;
+    .logo {
       margin-top: 1rem;
+      width: 150px;
     }
     .button {
       margin-top: 2rem;
@@ -41,26 +42,28 @@
       font-size: 1.2rem;
       cursor: pointer;
       text-decoration: none;
-      transition: background-color 0.3s, transform 0.3s;
+      transition: all 0.3s ease;
     }
     .button:hover {
       background-color: #66FF66;
       transform: scale(1.05);
     }
     section {
-      padding: 4rem 2rem;
+      padding: 6rem 2rem;
       max-width: 1000px;
       margin: 0 auto;
       text-align: center;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s ease-out;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0px);
     }
     section h2 {
-      font-family: 'Montserrat', sans-serif;
       font-size: 2rem;
       margin-bottom: 1rem;
-    }
-    section p, label {
-      font-size: 1.1rem;
-      color: #ccc;
     }
     .products {
       display: flex;
@@ -72,7 +75,7 @@
     .products img {
       max-width: 300px;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     }
     form {
       margin-top: 3rem;
@@ -96,7 +99,7 @@
       border-radius: 50px;
       font-size: 1.2rem;
       cursor: pointer;
-      transition: background-color 0.3s, transform 0.3s;
+      transition: all 0.3s ease;
     }
     input[type="submit"]:hover {
       background-color: #66FF66;
@@ -106,15 +109,16 @@
       text-align: center;
       padding: 2rem;
       background-color: #2C2424;
-      font-size: 0.9rem;
       color: #777;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Kiffen ist Kultur,<br> Mischeschale dein Werkzeug.</h1>
+  <h1>Kiffen ist Kultur,<br> Mischeschaale dein Werkzeug.</h1>
+  <img src="images/f091e592-2591-44e0-93e1-ccb9b0962acb.jfif" alt="Mischeschaale Logo" class="logo">
   <a href="#produkte" class="button">Jetzt entdecken</a>
 </header>
 
@@ -137,8 +141,21 @@
 </section>
 
 <footer>
-  &copy; 2025 Mischeschale® | Stay Clean. Stay Elevated.
+  &copy; 2025 Mischeschaale® | Stay Clean. Stay Elevated.
 </footer>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  });
+  document.querySelectorAll('section').forEach(section => {
+    observer.observe(section);
+  });
+</script>
 
 </body>
 </html>
