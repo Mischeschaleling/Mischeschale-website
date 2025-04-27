@@ -1,128 +1,131 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mischeschale® - Kiffen ist Kultur </title>
+<!DOCTYPE html> <!-- Dokumenttyp: HTML5 -->
+<html lang="de"> <!-- Spracheinstellung: Deutsch -->
+<head> 
+  <meta charset="UTF-8"> <!-- Zeichensatz UTF-8: Unterstützt Umlaute usw. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Mobile Responsive Design -->
+  <title>Mischeschale® - Kiffen ist Kultur </title> <!-- Titel der Seite im Browser-Tab -->
+  
+  <!-- Einbinden von Google Fonts: Poppins Schriftart -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-  <style>
+
+  <style> <!-- Start des internen CSS-Styles -->
     html {
-      scroll-behavior: smooth;
+      scroll-behavior: smooth; /* Weiches Scrollen beim Klick auf Links */
     }
     body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #F9F6EE url('images/curved-wood-1080x1920.jpg') center/cover no-repeat;
-      background-attachment: fixed;
-      background-size: cover;
-      background-position: center;
+      margin: 0; /* Keine Standard-Ränder um die Seite */
+      font-family: 'Poppins', sans-serif; /* Schriftart der gesamten Seite */
+      background: #F9F6EE url('images/curved-wood-1080x1920.jpg') center/cover no-repeat; /* Hintergrundfarbe + Bild */
+      background-attachment: fixed; /* Hintergrund bleibt fixiert beim Scrollen */
+      background-size: cover; /* Hintergrundbild füllt Bildschirm */
+      background-position: center; /* Hintergrundbild zentrieren */
     }
     nav {
-      position: sticky;
-      top: 0;
-      background: rgba(255,255,255,0.9);
-      backdrop-filter: blur(5px);
-      z-index: 1000;
-      padding: 1rem 0;
+      position: sticky; /* Menüzeile bleibt beim Scrollen oben kleben */
+      top: 0; /* Klebt oben am Fenster */
+      background: rgba(255,255,255,0.9); /* Leicht transparenter Hintergrund */
+      backdrop-filter: blur(5px); /* Hintergrund leicht verschwommen */
+      z-index: 1000; /* Menü über anderen Elementen */
+      padding: 1rem 0; /* Abstand oben/unten */
     }
     nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
+      list-style: none; /* Keine Aufzählungspunkte */
+      display: flex; /* Horizontale Ausrichtung */
+      justify-content: center; /* Zentrieren der Links */
+      gap: 2rem; /* Abstand zwischen Links */
       margin: 0;
       padding: 0;
     }
     nav a {
-      font-family: 'Poppins', sans-serif;
-      text-decoration: none;
-      color: #3B2F2F;
-      font-weight: 600;
-      transition: color 0.3s, transform 0.3s;
+      font-family: 'Poppins', sans-serif; /* Schrift im Menü */
+      text-decoration: none; /* Keine Unterstreichung */
+      color: #3B2F2F; /* Dunkelbraune Schriftfarbe */
+      font-weight: 600; /* Etwas fetter */
+      transition: color 0.3s, transform 0.3s; /* Sanfte Animation beim Hover */
     }
     nav a:hover {
-      color: #4CAF50;
-      transform: scale(1.05);
+      color: #4CAF50; /* Farbe wechselt zu grün beim Hover */
+      transform: scale(1.05); /* Link wird minimal größer beim Hover */
     }
     header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 3rem;
-      text-align: center;
-      background: rgba(255,255,255,0.7);
+      display: flex; /* Flexbox für Zentrierung */
+      flex-direction: column; /* Elemente untereinander */
+      align-items: center; /* Zentriert horizontal */
+      justify-content: center; /* Zentriert vertikal */
+      min-height: 100vh; /* Nimmt volle Bildschirmhöhe ein */
+      padding: 3rem; /* Innenabstand */
+      text-align: center; /* Text zentriert */
+      background: rgba(255,255,255,0.7); /* Leicht weißer Schleier über Bild */
     }
     header h1 {
-      font-size: 2rem;
-      margin: 0 0 1rem 0;
+      font-size: 2rem; /* Größe der Überschrift */
+      margin: 0 0 1rem 0; /* Abstand unten */
     }
     .logo {
-      margin-top: 1rem;
-      width: 200px;
+      margin-top: 1rem; /* Abstand zum Claim */
+      width: 200px; /* Breite des Logos */
     }
     .button {
-      margin-top: 2rem;
-      background-color: #8ebf63;
-      color: white;
-      padding: 1rem 2rem;
-      border: none;
-      border-radius: 50px;
-      font-size: 1.2rem;
-      cursor: pointer;
-      text-decoration: none;
-      transition: all 0.3s ease;
+      margin-top: 2rem; /* Abstand nach oben */
+      background-color: #8ebf63; /* Grüne Hintergrundfarbe */
+      color: white; /* Weiße Schriftfarbe */
+      padding: 1rem 2rem; /* Innenabstand Button */
+      border: none; /* Keine Umrandung */
+      border-radius: 50px; /* Runde Ecken */
+      font-size: 1.2rem; /* Schriftgröße im Button */
+      cursor: pointer; /* Mauszeiger wird zur Hand */
+      text-decoration: none; /* Kein Unterstrich */
+      transition: all 0.3s ease; /* Weiche Animation */
     }
     .button:hover {
-      background-color: #66FF66;
-      transform: scale(1.05);
+      background-color: #66FF66; /* Helleres Grün beim Hover */
+      transform: scale(1.05); /* Button wächst leicht beim Hover */
     }
     section {
-      padding: 6rem 2rem;
-      max-width: 1000px;
-      margin: 0 auto;
-      text-align: center;
-      opacity: 0;
-      transform: translateY(50px);
-      transition: all 0.8s ease-out;
+      padding: 6rem 2rem; /* Innenabstand in Sections */
+      max-width: 1000px; /* Maximalbreite */
+      margin: 0 auto; /* Zentrierung */
+      text-align: center; /* Text zentrieren */
+      opacity: 0; /* Unsichtbar vor Scroll */
+      transform: translateY(50px); /* Start leicht verschoben */
+      transition: all 0.8s ease-out; /* Weiche Animation sichtbar werden */
     }
     section.visible {
-      opacity: 1;
-      transform: translateY(0px);
+      opacity: 1; /* Sichtbar wenn im Viewport */
+      transform: translateY(0px); /* Normale Position */
     }
     section h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
+      font-size: 2rem; /* Schriftgröße H2-Überschriften */
+      margin-bottom: 1rem; /* Abstand nach unten */
     }
     .products {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
+      display: flex; /* Flexbox Anordnung der Produkte */
+      flex-wrap: wrap; /* Zeilenumbruch bei kleinen Displays */
+      justify-content: center; /* Zentriert die Produktbilder */
+      gap: 2rem; /* Abstand zwischen Bildern */
       margin-top: 2rem;
     }
     .products img {
-      max-width: 300px;
-      border-radius: 10px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      max-width: 300px; /* Maximale Breite der Produktbilder */
+      border-radius: 10px; /* Runde Ecken */
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Schattenwurf */
     }
     form {
-      margin-top: 3rem;
+      margin-top: 3rem; /* Abstand oben */
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
+      flex-direction: column; /* Felder untereinander */
+      align-items: center; /* Zentrierung */
+      gap: 1rem; /* Abstand zwischen Feldern */
     }
     input[type="email"] {
       padding: 1rem;
-      width: 300px;
+      width: 300px; /* Breite E-Mail Eingabefeld */
       border: none;
       border-radius: 30px;
       font-size: 1rem;
     }
     input[type="submit"] {
-      background-color: #4CAF50;
+      background-color: #4CAF50; /* Grüner Button */
       color: white;
       padding: 1rem 2rem;
       border: none;
@@ -138,60 +141,67 @@
     footer {
       text-align: center;
       padding: 2rem;
-      background-color: #2C2424;
-      color: #777;
-      font-size: 0.9rem;
+      background-color: #2C2424; /* Dunkler Hintergrund im Footer */
+      color: #777; /* Graue Schrift */
+      font-size: 0.9rem; /* Etwas kleinere Schrift */
     }
   </style>
 </head>
+
 <body>
 
+<!-- Navigation Menü -->
 <nav>
   <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#produkte">Produkte</a></li>
-    <li><a href="#newsletter">Newsletter</a></li>
+    <li><a href="#home">Home</a></li> <!-- Link zu Header -->
+    <li><a href="#produkte">Produkte</a></li> <!-- Link zu Produktbereich -->
+    <li><a href="#newsletter">Newsletter</a></li> <!-- Link zu Newsletterbereich -->
   </ul>
 </nav>
 
+<!-- Header Bereich -->
 <header id="home">
-  <h1>MISCHESCHALE® <br><br>Kiffen ist Kultur - <br>Mischeschale das Werkzeug.</h1>
-  <img src="images/transpa.png" alt="Mischeschaale Logo" class="logo">
-  <a href="#produkte" class="button">Jetzt entdecken</a>
+  <h1>MISCHESCHALE® <br><br>Kiffen ist Kultur - <br>Mischeschale das Werkzeug.</h1> <!-- Hauptclaim -->
+  <img src="images/transpa.png" alt="Mischeschaale Logo" class="logo"> <!-- Logo -->
+  <a href="#produkte" class="button">Jetzt entdecken</a> <!-- Button zu Produkte -->
 </header>
 
+<!-- Produkt Bereich -->
 <section id="produkte">
   <h2>Du und Deine Mischeschale – built different.</h2>
   <div class="products">
-    <img src="images/P1130273.JPG" alt="Mischeschale Produkt 1">
-    <img src="images/P1130277.JPG" alt="Mischeschale Produkt 2">
-    <img src="images/P1130277.JPG" alt="Mischeschale Produkt 3">
+    <img src="images/P1130273.JPG" alt="Mischeschale Produkt 1"> <!-- Produktfoto 1 -->
+    <img src="images/P1130277.JPG" alt="Mischeschale Produkt 2"> <!-- Produktfoto 2 -->
+    <img src="images/P1130277.JPG" alt="Mischeschale Produkt 3"> <!-- Produktfoto 3 -->
   </div>
 </section>
 
+<!-- Newsletter Bereich -->
 <section id="newsletter">
   <h2>Stay tuned and be a part of us...</h2>
   <p>Trag dich ein und erfahre als Erster von unserem Launch!</p>
   <form action="#" method="post">
-    <input type="email" name="email" placeholder="Deine E-Mail Adresse" required>
-    <input type="submit" value="Be a part">
+    <input type="email" name="email" placeholder="Deine E-Mail Adresse" required> <!-- Eingabefeld Email -->
+    <input type="submit" value="Be a part"> <!-- Abschicken-Button -->
   </form>
 </section>
 
+<!-- Footer Bereich -->
 <footer>
   &copy; 2025 Mischeschale® | Stay Clean. Stay Elevated.
 </footer>
 
+<!-- JavaScript Scroll Animation -->
 <script>
-  const observer = new IntersectionObserver(entries => {
+  const observer = new IntersectionObserver(entries => { // Beobachtet, ob Sections im Viewport sind
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
+        entry.target.classList.add('visible'); // Wenn sichtbar → Fade-In Animation
       }
     });
   });
   document.querySelectorAll('section').forEach(section => {
-    observer.observe(section);
+    observer.observe(section); // Wendet den Observer auf jede Section an
   });
 </script>
 
