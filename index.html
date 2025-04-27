@@ -9,7 +9,6 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Phudu:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
-    /* Global Styles */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -39,7 +38,6 @@
       padding: 2rem 0;
     }
 
-    /* Navigation */
     nav {
       background-color: rgba(14, 27, 7, 0.85);
       position: sticky;
@@ -66,42 +64,56 @@
       color: #924622;
     }
 
-    /* Header */
     header.hero {
-      height: 90vh;
-      background: url('curved-wood-1080x1920.jpg') center center/cover no-repeat;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      text-align: center;
+      min-height: 90vh;
+      background-color: #0e1b07;
       color: #f7e8e1;
       padding: 2rem;
+      background-size: cover;
+      background-position: center;
       position: relative;
     }
 
-    header.hero::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(14, 27, 7, 0.4);
+    .hero-left {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 1rem;
     }
 
-    header.hero h1, header.hero p {
-      position: relative;
-      z-index: 1;
+    .hero-left img {
+      width: 150px;
+      height: auto;
     }
 
-    header.hero h1 {
-      font-size: 4rem;
-      margin-bottom: 1rem;
+    .hero-left h1 {
+      font-size: 3rem;
     }
 
-    header.hero p {
+    .hero-left p {
       font-size: 1.5rem;
+      margin-top: 1rem;
     }
 
-    /* Sections */
+    .hero-right {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-right img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
     .section {
       padding: 6rem 0;
     }
@@ -117,7 +129,6 @@
       font-size: 2.5rem;
     }
 
-    /* Product Grid */
     .products {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -150,7 +161,6 @@
       font-size: 1.1rem;
     }
 
-    /* Footer */
     footer {
       background-color: #2d545e;
       color: #f7e8e1;
@@ -159,16 +169,19 @@
       font-size: 0.9rem;
     }
 
-    /* Responsive Text */
     @media (max-width: 768px) {
-      header.hero h1 {
-        font-size: 2.5rem;
+      header.hero {
+        flex-direction: column;
+        text-align: center;
       }
-      header.hero p {
-        font-size: 1.2rem;
+      .hero-left, .hero-right {
+        width: 100%;
       }
-      .section h2 {
-        font-size: 2rem;
+      .hero-left {
+        align-items: center;
+      }
+      .hero-left img {
+        margin-bottom: 1rem;
       }
     }
   </style>
@@ -186,8 +199,14 @@
   </nav>
 
   <header class="hero">
-    <h1>Mischeschale</h1>
-    <p>Kiffen ist Kultur. Mischeschale das Werkzeug.</p>
+    <div class="hero-left">
+      <img src="dein-logo.png" alt="Logo Mischeschale">
+      <h1>Mischeschale</h1>
+      <p>Kiffen ist Kultur. Mischeschale das Werkzeug.</p>
+    </div>
+    <div class="hero-right">
+      <img src="smoke.jfif" alt="Produktbild Header">
+    </div>
   </header>
 
   <section id="about" class="section">
