@@ -3,97 +3,103 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mischeschaale — Misch dein Leben</title>
+  <title>Mischeschaale® - Misch dein Leben</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Open Sans', sans-serif;
+      background-color: #3B2F2F;
       color: #EEE8D5;
-      background: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80') no-repeat center center fixed;
-      background-size: cover;
-      background-attachment: fixed;
     }
     header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
       text-align: center;
-      padding: 6rem 2rem;
-      background: rgba(0,0,0,0.5);
     }
     header h1 {
       font-family: 'Montserrat', sans-serif;
       font-size: 4rem;
-      margin: 0 0 1rem 0;
+      margin: 0;
     }
     header p {
       font-size: 1.5rem;
-      margin-bottom: 2rem;
+      margin-top: 1rem;
     }
     .button {
+      margin-top: 2rem;
       background-color: #4CAF50;
-      border: none;
       color: white;
       padding: 1rem 2rem;
-      text-decoration: none;
-      font-size: 1.2rem;
+      border: none;
       border-radius: 50px;
+      font-size: 1.2rem;
+      cursor: pointer;
       transition: background-color 0.3s, transform 0.3s;
-      display: inline-block;
     }
     .button:hover {
       background-color: #66FF66;
       transform: scale(1.05);
     }
     section {
-      padding: 4rem 2rem;
-      background: rgba(0,0,0,0.6);
+      padding: 6rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
     }
     section h2 {
       font-family: 'Montserrat', sans-serif;
       font-size: 2.5rem;
       margin-bottom: 1rem;
-      text-align: center;
     }
     section p {
-      max-width: 800px;
-      margin: 0 auto;
       font-size: 1.2rem;
-      text-align: center;
+      line-height: 1.6;
+      color: #ccc;
     }
     footer {
       text-align: center;
       padding: 2rem;
-      background: rgba(0,0,0,0.7);
+      background-color: #2C2424;
       font-size: 0.9rem;
       color: #777;
+    }
+    a {
+      color: #4CAF50;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>MISCHESCHAALE™</h1>
-  <p>Misch dein Leben. Misch mit Stil.</p>
-  <a href="#shop" class="button">Stay High, Stay Clean</a>
+  <h1>Mischeschaale®</h1>
+  <p>Misch dein Leben.</p>
+  <a href="#about" class="button">Mehr erfahren</a>
 </header>
 
 <section id="about">
-  <h2>Über uns</h2>
+  <h2>Unsere Vision</h2>
   <p>
-    Mischeschaale™ — geboren aus dem Wunsch, Chaos mit Stil zu begegnen. Keine Krümelei mehr, kein Plastikschrott. 
-    Einfach nur saubere Mischen, entspannter Vibe und ein bisschen mehr Klasse beim Abstürzen. Willkommen bei der neuen Generation.
+    Mischeschaale® ist mehr als ein Produkt. Es ist eine Bewegung. 
+    Wir bringen Ordnung und Ästhetik in deine Rituale. Klare Designs, nachhaltige Materialien und ein Statement für bewussten Genuss.
   </p>
 </section>
 
-<section id="shop">
-  <h2>Shop — Coming Soon</h2>
+<section id="product">
+  <h2>Das Original</h2>
   <p>
-    Bald kannst du die edelsten Holzschalen der Galaxie shoppen. 
-    Handgemacht für echte Misch-Legenden. 🚀
+    Unsere handgefertigte Holzschale, perfekt abgestimmt auf deine Papes. 
+    Praktisch. Stilvoll. Ein Must-Have für echte Genießer. Bald im Shop verfügbar.
   </p>
 </section>
 
 <footer>
-  &copy; 2025 Mischeschaale™ — Stay Clean, Stay Elevated
+  &copy; 2025 Mischeschaale® | <a href="#">Instagram</a> | <a href="#">Kontakt</a>
 </footer>
 
 </body>
